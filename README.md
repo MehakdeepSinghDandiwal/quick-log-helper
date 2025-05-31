@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="Quick Log Helper Logo" width="200"/>
+  <img src="https://github.com/MehakdeepSinghDandiwal/quick-log-helper/releases/download/quick-log-helper/logo.png" alt="Quick Log Helper Logo" width="200"/>
 </p>
 
 # Quick Log Helper
