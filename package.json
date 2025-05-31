@@ -1,0 +1,119 @@
+{
+  "name": "quick-log-helper",
+  "displayName": "Quick Log Helper",
+  "description": "Quickly insert and delete console logs, warnings, and errors based on language and shortcuts.",
+  "version": "1.0.0",
+  "publisher": "MehakdeepSinghDandiwal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MehakdeepSinghDandiwal/log-helper.git"
+  },
+ "icon": "assets/logo.png",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "activationEvents": [
+    "onCommand:extension.insertLogStatement",
+    "onCommand:extension.insertLogWithLineNumber",
+    "onCommand:extension.insertWarnLog",
+    "onCommand:extension.insertErrorLog",
+    "onCommand:extension.selectAllLogs",
+    "onCommand:extension.selectNormalLogs",
+    "onCommand:extension.selectWarnLogs",
+    "onCommand:extension.selectErrorLogs"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.insertLogStatement",
+        "title": "Insert Console Log (No Line Number)"
+      },
+      {
+        "command": "extension.insertLogWithLineNumber",
+        "title": "Insert Console Log (With Line Number)"
+      },
+      {
+        "command": "extension.insertWarnLog",
+        "title": "Insert Console Warn (With Line Number)"
+      },
+      {
+        "command": "extension.insertErrorLog",
+        "title": "Insert Console Error (With Line Number)"
+      },
+      {
+        "command": "extension.selectAllLogs",
+        "title": "Select All Console Logs"
+      },
+      {
+        "command": "extension.selectNormalLogs",
+        "title": "Select Normal Logs"
+      },
+      {
+        "command": "extension.selectWarnLogs",
+        "title": "Select Warn Logs"
+      },
+      {
+        "command": "extension.selectErrorLogs",
+        "title": "Select Error Logs"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "shift+cmd+j",
+        "command": "extension.insertLogStatement",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+l",
+        "command": "extension.insertLogWithLineNumber",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+w",
+        "command": "extension.insertWarnLog",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+e",
+        "command": "extension.insertErrorLog",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+alt+d",
+        "command": "extension.selectAllLogs",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+alt+l",
+        "command": "extension.selectNormalLogs",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+alt+w",
+        "command": "extension.selectWarnLogs",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+alt+e",
+        "command": "extension.selectErrorLogs",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "categories": [
+    "Other"
+  ],
+  "files": [
+  "assets",
+  "extension.js",
+  "README.md",
+  "LICENSE"
+],
+  "scripts": {
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "vsce": "^2.11.0"
+  }
+}
